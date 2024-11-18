@@ -11,6 +11,8 @@
 ## Overview
 ![DockerVsVirtualization](https://github.com/user-attachments/assets/62b47f4f-7810-4ad2-847a-a0fb54796d00)
 
+*Docker and Containerized Applications vs Virtualization Architectures*
+
 Docker is a software development tool that allows developers to build, run, and deploy applications and web servers quickly through packages. These packages contain everything needed for these processes including libraries, system tools, code, and any other dependencies in containerized applications. Docker is similar to Virtualization in the sense that they both are used to deploy applications, but how they do so differs slightly.
 
 With Virtualization, applications are run on virtual machines that each have their independent operating system and applications, all on a greater host computer and operating system. In other words, Virtualization containerizes on the operating system layer, allowing one computer to have multiple internal operating systems installed. Docker, however, containerizes on the application level, allowing applications to be run independently of the greater operating system. Docker has to be configured for the host operating system, but once it is, applications can be run on that computer, essentially virtually. 
