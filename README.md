@@ -25,7 +25,7 @@ These instructions will detail how to make and run a simple web application usin
 *A step-by-step guide to setting up Docker for a simple Node.js web application. This setup will create a lightweight environment to host a basic web server.*
 
 ### 1. Install Docker
-Download Docker Desktop, go to the Docker website and download Docker Desktop for your OS (Windows, Mac, or Linux).
+Download Docker Desktop, go to the Docker [website](https://www.docker.com/) and download Docker Desktop for your OS (Windows, Mac, or Linux).
     
 Install Docker, and follow the installation instructions for your system. Once installed, open Docker Desktop to ensure it’s running.
 
