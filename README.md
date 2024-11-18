@@ -3,6 +3,7 @@
 ## Overview
 (Insert image)
 
+
 Docker is a software development tool that allows developers to build, run, and deploy applications and web servers quickly through packages. These packages contain everything needed for these processes including libraries, system tools, code, and any other dependencies in containerized applications. Docker is similar to Virtualization in the sense that they both are used to deploy applications, but how they do so differs slightly.
 
 With Virtualization, applications are run on virtual machines that each have their independent operating system and applications, all on a greater host computer and operating system. In other words, Virtualization containerizes on the operating system layer, allowing one computer to have multiple internal operating systems installed. Docker, however, containerizes on the application level, allowing applications to be run independently of the greater operating system. Docker has to be configured for the host operating system, but once it is, applications can be run on that computer, essentially virtually. 
@@ -118,3 +119,41 @@ docker-compose down
 (insert image)
 
 With this setup, you have a basic Dockerized Node.js application. Using Docker Compose helps keep your development environment isolated and allows you to add other services easily. 
+
+## Learning Outcomes
+- Familiarity with fundamental Docker concepts, including images, containers, and Dockerfiles. Building and running a Docker image, you’ll see how Docker packages your application with its dependencies, ensuring consistency across - different environments.
+- Creating and Managing Dockerfiles
+- Running and Testing Dockerized Applications
+- Configuring Isolated Development Environments
+- Container Management, Scaling, and Portability Skills
+
+## Potential Issues
+If there is a mistake in the setup process, it likely won’t be revealed until trying to access the new application at http://localhost:3000/ in which the site can’t be reached.
+
+The first sanity check should be to make sure the application is running. If building in a terminal, the terminal should display a “Server running” message as shown in Task 7. This can also be verified in the Containers tab of Docker Dashboard. If the desired container you want running has a triangle symbol under actions:
+
+(insert image)
+
+The application is not running. Click it to run the build process outlined in Task 7, then verify if the application actions has changed to a square:
+
+(insert image)
+
+Try accessing the application again. If the site still can’t be reached, or the application couldn’t be built successfully, it means the issue is within the project itself.
+
+Check the project structure to ensure every necessary file is in the correct location and the files are named correctly:
+
+(insert image)
+
+This picture shows the structure of the project as shown in the Visual Studio Code editor. Since the code and commands in each of the files all reference each other, if a filename is changed, the references to the file must also be changed. For instance, the auto-generated package.json file references `index.js` as its main file, and the Dockerfile lists `index.js` in the run command, but if this file was named `index.txt`, it could cause issues.
+
+If the file structure is correct, it’s best to check the contents of each file to see if they match what’s outlined in Tasks 3-6. The code is provided for copying in Tasks 4-6, and the `package.json` file in Task 3 is auto-generated, but an image is provided to show the expected output. Ensure every file has what’s expected and continue with Task 7 to try building and accessing your newly created application.
+
+## What to do Next? (Making a to-do list project)
+The purpose of these instructions is to walk you through the basics of how Docker and its required elements (packages, containers, images) can be used to develop Web applications through a typical Hello World example project. This project only prints to a barebones site, but learning the process to get there is the end goal.
+
+Another common software development project is a to-do list. Docker has a guide for how to make such an application with more in-depth development tasks like sharing the app, persisting a database, and multi-container apps. To access their guide for a to-do list manager application enter the command into your terminal:
+	`docker run -dp 80:80 docker/getting-started`
+and open the browser to http://localhost
+
+## Resources
+https://docs.docker.com/get-started/get-docker/
