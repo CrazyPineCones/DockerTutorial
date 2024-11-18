@@ -9,8 +9,7 @@
 6. [Resources](#resources)
 
 ## Overview
-(Insert image)
-
+![DockerVsVirtualization](https://github.com/user-attachments/assets/62b47f4f-7810-4ad2-847a-a0fb54796d00)
 
 Docker is a software development tool that allows developers to build, run, and deploy applications and web servers quickly through packages. These packages contain everything needed for these processes including libraries, system tools, code, and any other dependencies in containerized applications. Docker is similar to Virtualization in the sense that they both are used to deploy applications, but how they do so differs slightly.
 
@@ -40,7 +39,10 @@ Run the following command to create a package.json file for your Node.js app.
 ```bash
 npm init -y
 ```
-(Insert image)
+
+![InitializeNodejs](https://github.com/user-attachments/assets/919547fe-3af0-4497-a63e-37eb24427c18)
+
+*A `package.json` file is used by the `npm` CLI to identify your project and understand how to handle its dependencies. It enables `npm` to start your project, run scripts, etc.*
 
 ### 4. Create a Basic Web Server
 Inside the project directory, create an index.js file with a simple Node.js (JavaScript) web server, you can do this using the code editor of your choice: 
@@ -112,7 +114,8 @@ docker compose up --build
 ```
 This will build your Docker image based on the Dockerfile, start a container, and map your local port 3000 to the container’s port 3000.
 
-(insert image)
+![ServerRunning](https://github.com/user-attachments/assets/d9494cf6-cf2b-4279-a4c2-455a04c63608)
+
 
 ### 8. Access the Application
 Open your browser and go to http://localhost:3000 to see the script served from your Dockerized Node.js application.
@@ -124,7 +127,7 @@ docker-compose down
 ```
 
 ### All done!
-(insert image)
+![DockerWhale](https://github.com/user-attachments/assets/6dcf142b-441f-4040-94be-7b0931b86ea2)
 
 With this setup, you have a basic Dockerized Node.js application. Using Docker Compose helps keep your development environment isolated and allows you to add other services easily. 
 
@@ -140,17 +143,17 @@ If there is a mistake in the setup process, it likely won’t be revealed until 
 
 The first sanity check should be to make sure the application is running. If building in a terminal, the terminal should display a “Server running” message as shown in Task 7. This can also be verified in the Containers tab of Docker Dashboard. If the desired container you want running has a triangle symbol under actions:
 
-(insert image)
+![DockerNotRunning](https://github.com/user-attachments/assets/55aca11a-9c62-41a1-a951-b7cbdd1ac56c)
 
 The application is not running. Click it to run the build process outlined in Task 7, then verify if the application actions has changed to a square:
 
-(insert image)
+![DockerRunning](https://github.com/user-attachments/assets/30034543-c1cf-4c5a-b40e-1690e06d1311)
 
 Try accessing the application again. If the site still can’t be reached, or the application couldn’t be built successfully, it means the issue is within the project itself.
 
 Check the project structure to ensure every necessary file is in the correct location and the files are named correctly:
 
-(insert image)
+![ProjectStructure](https://github.com/user-attachments/assets/8f3ef6ec-da5f-4a5b-aeee-90fea0e6c9ee)
 
 This picture shows the structure of the project as shown in the Visual Studio Code editor. Since the code and commands in each of the files all reference each other, if a filename is changed, the references to the file must also be changed. For instance, the auto-generated package.json file references `index.js` as its main file, and the Dockerfile lists `index.js` in the run command, but if this file was named `index.txt`, it could cause issues.
 
