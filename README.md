@@ -1,5 +1,13 @@
 # How to Set Up and Use Docker for Web Development Projects
 
+## Table of Contents
+1. [Overview](#overview)
+2. [Step-by-Step Instructions](#step-by-step-instructions)
+3. [Learning Outcomes](#learning-outcomes)
+4. [Potential Issues](#potential-issues)
+5. [What to do Next? (Making a to-do list project)](#what-to-do-next-making-a-to-do-list-project)
+6. [Resources](#resources)
+
 ## Overview
 (Insert image)
 
