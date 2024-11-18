@@ -160,7 +160,11 @@ If the file structure is correct, it’s best to check the contents of each file
 The purpose of these instructions is to walk you through the basics of how Docker and its required elements (packages, containers, images) can be used to develop Web applications through a typical Hello World example project. This project only prints to a barebones site, but learning the process to get there is the end goal.
 
 Another common software development project is a to-do list. Docker has a guide for how to make such an application with more in-depth development tasks like sharing the app, persisting a database, and multi-container apps. To access their guide for a to-do list manager application enter the command into your terminal:
-	`docker run -dp 80:80 docker/getting-started`
+
+```bash
+docker run -dp 80:80 docker/getting-started
+```
+
 and open the browser to http://localhost
 
 ## Resources
