@@ -33,13 +33,11 @@ If Docker is already installed on your operating system, and your administrator 
 <details>
     <summary>Click Drop-Down Arrow for How To Add Users to a Group</summary>
     
-    1. Run Computer Management as an administrator.
-    
-    2. Navigate to Local Users and Groups > Groups > docker-users.
-    
-    3. Right-click to add the user to the group.
-    
-    4. Sign out and sign back in for the changes to take effect.
+    1. Open Command Prompt as Administrator
+    Search “cmd”, right-click → Run as administrator
+
+    2. Run this command : net localgroup docker-users your_username /add
+    Replace your_username with your actual Windows username.
     
 </details>
 
