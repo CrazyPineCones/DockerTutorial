@@ -23,6 +23,10 @@ These instructions will detail how to make and run a simple web application usin
 
 ## Step-by-Step Instructions
 *A step-by-step guide to setting up Docker for a simple Node.js web application. This setup will create a lightweight environment to host a basic web server.*
+<details>
+    <summary>What is Node.js? </summary>
+         Node.js is a JavaScript runtime environment that lets you execute JavaScript code outside of a web browser, typically on a server. This is beneficial as you can now use the popular JavaScript language, invented for the frontend, in your backend as well, improving readbility, sacalability, and simplifying your application logic. Node.js is designed for building fast, scalable network applications. 
+</details>
 
 ### 1. Install Docker
 Download Docker Desktop, go to the Docker [website](http://docs.docker.com/get-started/get-docker/) and download Docker Desktop for your OS (Windows, Mac, or Linux).
