@@ -52,15 +52,21 @@ mkdir simple-node-app
 cd simple-node-app
 ```
 
-### 3. Initialize a Node.js Project
-Run the following command to create a package.json file for your Node.js app.
-```bash
-npm init -y
+### 3. Configure your Node.js Project
+In a code editor of your choice, create a new file and save it as ```package.json``` within the ```simple-node-app``` directory
+```json
+{
+  "name": "simple-node-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
 ```
 
-![InitializeNodejs](https://github.com/user-attachments/assets/919547fe-3af0-4497-a63e-37eb24427c18)
+To keep the spirit of Docker (dependency-free host setup), no local dependency installations are required, and all necessary dependencies are installed and run within the Docker container.
 
-*A `package.json` file is used by the `npm` CLI to identify your project and understand how to handle its dependencies. It enables `npm` to start your project, run scripts, etc.*
 
 ### 4. Create a Basic Web Server
 Inside the project directory, create an index.js file with a simple Node.js (JavaScript) web server, you can do this using the code editor of your choice: 
