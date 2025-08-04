@@ -32,6 +32,20 @@ These instructions will detail how to make and run a simple web application usin
 Download Docker Desktop, go to the Docker [website](http://docs.docker.com/get-started/get-docker/) and download Docker Desktop for your OS (Windows, Mac, or Linux).
     
 Install Docker, and follow the installation instructions for your system. Note that, installing Docker Desktop requires administrator privileges. However, once installed, it can be used without administrative access. Now open Docker Desktop to ensure it’s running.
+<details>
+    <summary>Find out your system architecture, which Docker Desktop to install </summary>
+    Upon navigating to the Get Docker page and choosing your operating system, you may find multiple variations of Docker Desktop to install. These are for
+    different system architectures. To find out yours, open a command terminal and enter accordingly based on your operating system
+
+    Windows
+    echo %PROCESSOR_ARCHITECTURE%
+
+    Mac/Linux
+    uname -m
+
+    x86_64 systems will get the result AMD64.
+    
+</details>
 
 If Docker is already installed on your operating system, and your administrator account is different to your user account, you must add the user to the docker-users group.
 <details>
