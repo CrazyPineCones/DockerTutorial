@@ -9,7 +9,7 @@
 6. [Resources](#resources)
 
 ## Overview
-![DockerVsVirtualization](https://github.com/user-attachments/assets/62b47f4f-7810-4ad2-847a-a0fb54796d00)
+![DockerVsVirtualization](docs/DockerTutorial_ContainerVM.png)
 
 *Docker and Containerized Applications vs Virtualization Architectures*
 
@@ -152,7 +152,7 @@ docker compose up --build
 ```
 This will build your Docker image based on the Dockerfile, start a container, and map your local port 3000 to the container’s port 3000.
 
-![ServerRunning](https://github.com/user-attachments/assets/d9494cf6-cf2b-4279-a4c2-455a04c63608)
+![ServerRunning](docs/DockerTutorial_DockerBuildSuccess.png)
 
 
 ### 8. Access the Application
@@ -165,7 +165,7 @@ docker-compose down
 ```
 
 ### All done!
-![DockerWhale](https://github.com/user-attachments/assets/6dcf142b-441f-4040-94be-7b0931b86ea2)
+![DockerWhale](docs/DockerTutorial_DockerMascot.png)
 
 With this setup, you have a basic Dockerized Node.js application. Using Docker Compose helps keep your development environment isolated and allows you to add other services easily. 
 
@@ -185,17 +185,17 @@ The first sanity check should be to make sure the application is running. If bui
 
 The application is not running. Click it to run the build process outlined in Task 7, then verify if the application actions has changed to a square:
 
-![DockerRunning](https://github.com/user-attachments/assets/30034543-c1cf-4c5a-b40e-1690e06d1311)
+![DockerRunning](docs/DockerTutorial_DockerEnv.png)
 
 Try accessing the application again. If the site still can’t be reached, or the application couldn’t be built successfully, it means the issue is within the project itself.
 
 Check the project structure to ensure every necessary file is in the correct location and the files are named correctly:
 
-![ProjectStructure](https://github.com/user-attachments/assets/8f3ef6ec-da5f-4a5b-aeee-90fea0e6c9ee)
+![ProjectStructure](docs/DockerTutorial_DirectoryTree.png)
 
 This picture shows the structure of the project as shown in the Visual Studio Code editor. Since the code and commands in each of the files all reference each other, if a filename is changed, the references to the file must also be changed. For instance, the auto-generated package.json file references `index.js` as its main file, and the Dockerfile lists `index.js` in the run command, but if this file was named `index.txt`, it could cause issues.
 
-If the file structure is correct, it’s best to check the contents of each file to see if they match what’s outlined in Tasks 3-6. The code is provided for copying in Tasks 4-6, and the `package.json` file in Task 3 is auto-generated, but an image is provided to show the expected output. Ensure every file has what’s expected and continue with Task 7 to try building and accessing your newly created application.
+If the file structure is correct, it’s best to check the contents of each file to see if they match what’s outlined in Tasks 3-6. Ensure every file has what’s expected and continue with Task 7 to try building and accessing your newly created application.
 
 ## What to do Next? (Making a to-do list project)
 The purpose of these instructions is to walk you through the basics of how Docker and its required elements (packages, containers, images) can be used to develop Web applications through a typical Hello World example project. This project only prints to a barebones site, but learning the process to get there is the end goal.
