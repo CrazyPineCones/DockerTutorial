@@ -177,25 +177,19 @@ With this setup, you have a basic Dockerized Node.js application. Using Docker C
 - Container Management, Scaling, and Portability Skills
 
 ## Potential Issues
-If there is a mistake in the setup process, it likely won’t be revealed until trying to access the new application at http://localhost:3000/ in which the site can’t be reached.
+If something goes wrong in the setup process, the problem may only become apparent when trying to access the application at http://localhost:3000, where the site might fail to load.
 
-The first sanity check should be to make sure the application is running. If building in a terminal, the terminal should display a “Server running” message as shown in Task 7. This can also be verified in the Containers tab of Docker Dashboard. If the desired container you want running has a triangle symbol under actions:
-
-![DockerNotRunning](https://github.com/user-attachments/assets/55aca11a-9c62-41a1-a951-b7cbdd1ac56c)
-
-The application is not running. Click it to run the build process outlined in Task 7, then verify if the application actions has changed to a square:
+The first sanity check should be to make sure the application is running. If building in a terminal, the terminal should display a “Server running” message as shown in Step 7. This can also be verified in the Containers tab of Docker Dashboard. If the desired container you want running has a triangle symbol under "Actions", the application is not running. Click the triangle to start the container, once it's running, the icon should change to a square.
 
 ![DockerRunning](docs/DockerTutorial_DockerEnv.png)
 
-Try accessing the application again. If the site still can’t be reached, or the application couldn’t be built successfully, it means the issue is within the project itself.
-
-Check the project structure to ensure every necessary file is in the correct location and the files are named correctly:
+If the application still doesn’t load, confirm that the project directory structure is correct:
 
 ![ProjectStructure](docs/DockerTutorial_DirectoryTree.png)
 
-This picture shows the structure of the project as shown in the Visual Studio Code editor. Since the code and commands in each of the files all reference each other, if a filename is changed, the references to the file must also be changed. For instance, the auto-generated package.json file references `index.js` as its main file, and the Dockerfile lists `index.js` in the run command, but if this file was named `index.txt`, it could cause issues.
+All files must be in their proper locations with correct names, the picture above shows the project tree, all files on the same level. Since the code and commands in each of the files all reference each other, if a filename is changed, the references to the file must also be changed. For instance, the package.json file references `index.js` as its main file, and the Dockerfile lists `index.js` in the run command, but if this file was named `index.txt`, it could cause issues.
 
-If the file structure is correct, it’s best to check the contents of each file to see if they match what’s outlined in Tasks 3-6. Ensure every file has what’s expected and continue with Task 7 to try building and accessing your newly created application.
+If the file structure is correct, verify the contents of each file. Compare your files to those shown in Steps 3–6. After confirming the above, repeat step 7.
 
 ## What to do Next? (Making a to-do list project)
 The purpose of these instructions is to walk you through the basics of how Docker and its required elements (packages, containers, images) can be used to develop Web applications through a typical Hello World example project. This project only prints to a barebones site, but learning the process to get there is the end goal.
